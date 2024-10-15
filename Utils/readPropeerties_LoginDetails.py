@@ -1,14 +1,15 @@
 import configparser
 
-config=configparser.RawConfigParser()
+config = configparser.RawConfigParser()
 config.read("./Configurations/loginDetails.ini")
 
+
 class ReadLoginConfig():
-    def getsauceDemoURL(self):
-        return config.get("URLS","sauceDemoURL")
+    def getSauceDemoURL(self):
+        return config.get("URLS", "sauceDemoURL")
+
+    def getUserName(self):
+        return config.get('Login Details', 'username')
 
 
-
-
-    #TODO create function to read username =  MoreBlessing
-    #TODO create function to read password = Motlatso
+    # TODO create function to read password = Motlatso
