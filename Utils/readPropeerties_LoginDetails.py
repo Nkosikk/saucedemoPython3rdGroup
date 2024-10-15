@@ -12,4 +12,5 @@ class ReadLoginConfig():
         return config.get('Login Details', 'username')
 
 
-    # TODO create function to read password = Motlatso
+    def getPassword(self):
+        return config.get('Login Details',  'password')
