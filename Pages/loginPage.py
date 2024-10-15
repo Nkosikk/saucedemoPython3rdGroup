@@ -26,5 +26,7 @@ class LoginPage:
         loginElement = wait.until(EC.visibility_of_element_located((By.ID, self.button_login_id)))
         loginElement.click()
 
+    def verifySuccefulLogin(self):
+        wait = WebDriverWait(self.driver, 10)
+        assert "Product" in self.driver.title, "Page title does not match 'Product'"
 
-    # ToDo create a code to verify that login is a success = Nhlanhla
