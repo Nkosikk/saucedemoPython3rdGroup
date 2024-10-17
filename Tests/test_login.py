@@ -24,6 +24,15 @@ class Test_01_Login:
         self.login.enterPassword(self.password)
         allure.attach(self.driver.get_screenshot_as_png(),name="Login Page",attachment_type=AttachmentType.PNG)
 
+        # delete your name when done
+        # ToDo click login button = Sanele
+        # ToDo verify home page = Shepherd
+        # ToDo select any item = Consy
+        # ToDo validated item added to the cart = Zinhle
+
+
+
+
         time.sleep(2)
 
 
