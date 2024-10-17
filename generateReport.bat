@@ -1,0 +1,1 @@
+allure serve /Users/nkosi/Projects/Automation/saucedemoPython3rdGroup/allure-results
