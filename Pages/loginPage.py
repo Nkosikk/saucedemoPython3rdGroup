@@ -7,6 +7,7 @@ class LoginPage:
     textbox_username_id = "user-name"
     textbox_password_id = "password"
     button_login_id = "login-button"
+    title_product_xpath = "//span[@class='title'][contains(.,'Products')]"
 
     def __init__(self, driver):
         self.driver = driver
@@ -28,5 +29,6 @@ class LoginPage:
 
     def verifySuccefulLogin(self):
         wait = WebDriverWait(self.driver, 10)
-        assert "Product" in self.driver.title, "Page title does not match 'Product'"
+        productTitleElement = wait.until(EC.visibility_of_element_located((By.XPATH, self.title_product_xpath)))
+        productTitleElement.is_displayed()
 
