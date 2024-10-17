@@ -27,8 +27,5 @@ class LoginPage:
         loginElement = wait.until(EC.visibility_of_element_located((By.ID, self.button_login_id)))
         loginElement.click()
 
-    def verifySuccefulLogin(self):
-        wait = WebDriverWait(self.driver, 10)
-        productTitleElement = wait.until(EC.visibility_of_element_located((By.XPATH, self.title_product_xpath)))
-        productTitleElement.is_displayed()
+
 
